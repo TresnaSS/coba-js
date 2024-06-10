@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1">
+        <title>Personal Portofolio</title>
+        <!-- Custom css link -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <!-- End Custom css link -->
+
+    </head>
+    <body>
+        
+        <!-- Header design -->
+        <header>
+            <a href="#home" class="logo">TSS_san</a>
+
+            <ul class="navlist">
+                <li><a href="#home" class="active">Beranda</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#certif">Sertifikat</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+
+            <div class="bx bx-menu" id="menu-icon">
+
+            </div>
+        </header>
+        <!-- End Header design -->
+
+        <!-- Home section -->
+        <section class="home" id="home">
+            <div class="home-text">
+                <div class="slide">
+                    <h2><span>Halo, Saya</span></h2>
+                    <h1>Tresna Satya</h1>
+                    <h3>Mahasiswa & Gamers</h3>
+                    <p>Bersyukurlah dengan apa yang sudah kita miliki <br> dan berjuanglah dengan apa yang kita inginkan.<br><span>- TSS_san -</span></p>
+                </div>
+            </div>
+        </section>
+        <!-- End Home section -->
+
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="img/1684312073088.jpg" alt="Rin">
+            </div>
+
+            <div class="about-text">
+                <h2><span>Tentang</span> Saya</h2>
+                <h1>Mahasiswa Gunadarma</h1>
+                <p>Perkenalkan saya <span>Tresna Satya</span>, Pro player Honkai Impact 3rd. Pendidikan S1 di Universitas Gunadarma jurusan Teknik Informatika fakultas Teknik Industri. Hobi saya membaca manga/visual novel, bermain game, dan mengambar ilustrasi anime. </p>
+                <a href="https://www.facebook.com/tss.san.73?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                <a href="https://youtube.com/@TSSsan"><i class='bx bxl-youtube' ></i></a>
+                <a href="https://instagram.com/tresna_satya?igshid=MzNlNGNkZWQ4Mg=="><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </section>
+        <!-- End About section -->
+
+        <!-- Certif section -->
+        <section class="certif" id="certif">
+            <div class="main-text">
+                <h2>Sertifikat <span>Saya</span></h2>
+            </div>
+
+            <div class="certif-content">
+                <div class="box">
+                    <p>???</p>
+                </div>
+
+                <div class="box">
+                    <p>???</p>
+                </div>
+
+                <div class="box">
+                    <p>???</p>
+                </div>
+            </div>
+        </section>
+        <!-- End Certif section -->
+
+        <!-- Blog section -->
+        <section class="blog" id="blog">
+            <div class="blog-text">
+                <h2>Bl<span>o</span>g</h2>
+                <h1>Tulisan Terkini</h1>
+            </div>
+            <div class="certif-content">
+                <div class="box1">
+                    <p>???</p>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog section -->
+
+        <!-- Contact section -->
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <h1><span>K</span>ontak</h1>
+            </div>
+
+            <div class="contact-form">
+                <form name="contact-form" action="">
+                    <input name="username" type="name" placeholder="Username" required>
+                    <input name="email" type="email" placeholder="Email" required>
+                    <input name="hp" type="" placeholder="No hp" required>
+                    <textarea name="pesan" id="" cols="35" rows="10" placeholder="Masukkan Pesan" required></textarea>
+                    <input type="submit" value="Kirim" class="submit" required>
+                </form>
+            </div>
+        </section>
+        <!-- End Contact section -->
+
+        <!-- Last section -->
+        <section class="end">
+            <div class="last-text">
+                <p>Dibuat oleh <span>Tresna</span>, Have a nice day! </p>
+            </div>
+        </section>
+        <!-- End Last section -->
+
+        <!-- Custom js link -->
+        <script type="text/javascript" src="js/script.js"></script>
+        <!-- End Custom js link -->
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbznrVe4pN3XbDZiY315Vzl70Kkb7r2bkcu4i9B4tLs83FW1Aq4qRZ77aDCtzlgLRfWJuw/exec'
+            const form = document.forms['contact-form']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        form.reset() 
+                        console.log('Success!', response)
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+    </body>
+</html>
